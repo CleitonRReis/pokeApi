@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Denk+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Denk One', sans-serif;
+}
+
+body{
+    
+    background-color: #85bad6;
+
+}
+
+section{
+    width: 85%;
+    height: 75vh;
+    margin-top: 12%;
+    margin-left: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: linear-gradient(145deg, #85bad6, #032e47);
+    box-shadow: -5px 5px 10px #2f6f94,
+                5px -5px 10px #47a9e0;
+}
+
+.container{
+    width: 90%;
+    display: flex;
+    margin-top: 3%;
+}
+
+.container h1 {
+    width: 13.5%;
+    height: 7.5%;
+    position: absolute;
+    text-align: center;
+    align-self: start;
+    color: rgb(255, 206, 0);
+    text-transform: uppercase;
+    font-size: 40px;
+    text-shadow: 1px 0px 20px #000;
+    margin: -20px 0px 0px -25px;
+}
+
+section .container input {
+    width: 500px;
+    height: 5vh;
+    display: flex;
+    left: 35%;
+    top: 25.5%;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    position: absolute;
+    letter-spacing: 1px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: black 1px solid;
+    outline: none;
+    color: rgb(50, 88, 166);
+    background-color: rgb(235, 215, 137);
+}
+
+.fas {
+    color: rgb(255, 62, 63);
+    cursor: pointer;
+    font-size: 35px;
+    left: 70.5%;
+    position: absolute;
+    top: 25.5%;
+}
+
+.container .models{
+    max-width: 400px;
+    height: 35vh;
+    margin: 5px;
+    padding: 10px;
+    flex: 1;
+    border-radius: 20px;
+    margin-top: 23%;
+    right: -0.1%;
+    transition: all .5s;
+    box-shadow: inset 5px 5px 10px #2f7694,
+                inset -5px -5px 10px #3fa0c8;
+}
+
+.models:hover{
+    transform: translateY(-40px);
+    box-shadow:  5px -5px 30px #2f7694,
+                -5px 5px 30px #3fa0c8;
+}
+
+.name, .number, .type, .abilities{
+    color: rgb(255, 206, 0);
+    font-size: 20px;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.nameModels{
+    font-size: 50px;
+    color: #65c5f8;
+    text-shadow: 0px 10px 5px #000;
+}
+
+.container img{
+    display: flex;
+    max-width: 140px;
+    height: 140px;
+    margin: 15px;
+    border: none;
+    margin-top: -40%;
+    margin-left: 55%;
+    flex: 1;
+}
+
+.pokemonWindowArea{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color:  rgba(255, 255, 255, .5);
+    display: none;
+    transition: all ease .5s;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.pokemonWindowBody{
+    width: 950px;
+    border-radius: 10px;
+    color: rgb(255, 206, 0);
+    background: linear-gradient(145deg, #85bad6, #032e47);
+    box-shadow:  20px 20px 60px #719eb6, 
+                -20px -20px 60px #99d6f6;
+    display:flex;
+    margin: 90px 300px;
+    padding: 20px;
+}
+
+.pokemonWindowBody h1{
+    padding: 5px;
+    letter-spacing: 1px;
+}
+
+.nameWindow {
+    font-size: 60px;
+    color: #65c5f8;
+    text-shadow: 0px 10px 5px #000;
+}
+
+.pokemonBig{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pokemonBig img{
+    width: 300px;
+    height: 300px;
+}
+
+.infoPokemon{
+    flex: 1;
+    padding: 20px;
+    margin: 80px 200px 0px 20px;
+}
+
+.cancelMobileButton {
+    display:none;
+    height:40px;
+    text-align:center;
+    line-height: 40px;
+    margin-bottom:30px;
+}
+
+.icon i{
+    height: 30px;
+    font-size: 30px;
+    margin: 1px -30px;
+    position: fixed;
+    cursor: pointer;
+    color: rgb(255, 62, 63);
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px){
+
+    body{
+        flex-direction: column;
+    }
+
+    section{
+        width: 80%;
+        height: 100vh;
+        position: relative;
+        top: -10px;
+        display: block;
+    }
+
+    .container{
+        flex-direction: column;
+        height: 20px;
+        margin: 90px 10px;
+        bottom: 20px;
+    }
+
+    .container img{
+        max-width: 80px;
+        height: 80px;
+        margin: -45px 200px;
+    }
+
+    .container h1 {
+        font-size: 30px;
+        text-align: center;
+        margin: 20px 0px 0px 110px;
+    }
+    
+    .nameModels{
+        font-size: 25px;
+    }
+
+    .models:hover{
+        transform: translateY(-15px);
+    }
+
+    section .container input {
+        width: 200px;
+        height: 4vh;
+        left: 22%;
+        top: 10%;
+        font-size: 13px;
+        padding: 5px;
+        letter-spacing: 0px;
+    }
+
+    .fas{
+        font-size: 30px;
+        position: absolute;
+        top: 75px;
+        left: 285px;
+        position: relative;
+    }
+
+    .container .models{
+        max-width: 300px;
+        height: 35vh;
+        margin: 10px 45px;
+        position: relative;
+        top: 90px;
+        padding: 10px;
+        margin-top: 10%;
+    }
+}
+
+/* =============================================================================== */
+
+@media only screen and (min-width: 755px) and (max-width: 1310px){
+
+    section .container input {
+        width: 450px;
+        height: 5vh;
+        display: flex;
+        left: 35%;
+        position: absolute;
+        letter-spacing: 1px;
+    }
+}
+
+/* ================================================================================ */
+
+@media only screen and (min-width: 755px) and (max-width: 1100px){
+
+    section .container input {
+        width: 380px;
+        height: 5vh;
+        display: flex;
+        left: 35%;
+        top: 24%;
+        position: absolute;
+        letter-spacing: 1px;
+    }
+
+    .fas {
+        color: rgb(255, 62, 63);
+        cursor: pointer;
+        font-size: 35px;
+        left: 70.5%;
+        position: absolute;
+        top: 24%;
+    }
+    
+    .nameModels{
+        font-size: 40px;
+    }
+}
+
+/* ============================================================================= */
+
+@media only screen and (min-width: 755px) and (max-width: 970px){
+
+    section .container input {
+        width: 335px;
+        height: 5vh;
+        display: flex;
+        left: 35%;
+        top: 23%;
+        position: absolute;
+        letter-spacing: 1px;
+    }
+
+    .fas {
+        color: rgb(255, 62, 63);
+        cursor: pointer;
+        font-size: 35px;
+        left: 70.5%;
+        position: absolute;
+        top: 23%;
+    }
+    
+    .container h1 {
+        margin: -25px 0px 0px -25px;
+    }
+
+    .container img{
+        max-width: 100px;
+    }
+
+    .nameModels{
+        font-size: 30px;
+    }
+    
+}
+
+/* ========================================================================= */
+
+@media only screen and (min-width: 755px) and (max-width: 845px){
+
+    .container h1 {
+        font-size: 30px;
+        text-align: center;
+        margin: -20px 0px 0px 50px;
+    }
+
+    section .container input {
+        width: 290px;
+        height: 5vh;
+        display: flex;
+        left: 38%;
+        top: 22%;
+        font-size: 18px;
+        position: absolute;
+        letter-spacing: 1px;
+    }
+
+    .fas {
+        top: 22%;
+        left: 77%;
+    }
+
+    .container img{
+        max-width: 90px;
+        margin-top: -50%;
+    }
+}
+
+/* ========================================================= */
+
+@media only screen and (min-width: 755px) and (max-width: 800px){
+
+    .container .models{
+        width: 300px;
+        height: 80vh;
+        position: relative;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        left: 25%;
+        top: 140px;
+        margin: 15px;
+    }
+
+    section{
+        width: 75%;
+        height: 100vh;
+        position: relative;
+        top: -50px;
+        display: block;
+    }
+
+    .container h1 {
+        top: 50px;
+        left: 200px;
+    }
+
+    section .container input {
+        top: 70px;
+        left: 170px;
+    }
+
+    .fas {
+        top: 70px;
+        left: 470px;
+    }
+    
+    .container img{
+        position: relative;
+        top: 110px;
+        left: 50px;
+    }
+}
