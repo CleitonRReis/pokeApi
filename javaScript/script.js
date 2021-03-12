@@ -1,4 +1,5 @@
 
+
 const API_URL = id => `https://pokeapi.co/api/v2/pokemon/${id}`;
 
 function getPokemon() {
@@ -52,8 +53,9 @@ function showPokemon() {
         searchPokemon.style.opacity = 1;
     }, 200);
 
-    modal();
     modalName();
+    modalNumber();
+    
 };
 
 let search = document.querySelector(' .fas ');
@@ -76,16 +78,17 @@ let close = document.querySelector(' .far ');
 
 close.addEventListener('click', closePokemon);
 
-function modal() {
 
-    let input = document.querySelector(' input ').value;
-
-    console.log(input)
+function modalName() {
+    
+    let input = document.querySelector(' input ').value.trim().toLocaleLowerCase();
 
     const IMG = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${input}.svg`;
 
     const imgPokemon = document.querySelector(' .pokemonWindowBody ');
-        
+
+    
+
     imgPokemon.querySelector(' .pokemonBig img ').src = IMG;
 
     axios.get(API_URL(input))
@@ -93,7 +96,7 @@ function modal() {
             console.error(err);
         })
         .then(res => {
-            
+
             const data = res.data;
 
             const { name, types, abilities, } = data;
@@ -110,9 +113,10 @@ function modal() {
         });
 };
 
-function modalName() {
 
-    let input = document.querySelector(' input ').value;
+function modalNumber() {
+    
+    let input = document.querySelector(' input ').value.trim();
 
     const imgPokemon = document.querySelector(' .pokemonWindowBody ');
 
@@ -121,10 +125,14 @@ function modalName() {
             console.error(err);
         })
         .then(res => {
-            
+
             const data = res.data;
 
             const { id, name, types, abilities, } = data;
+
+            if(input === ''){
+                return;
+            }
 
             const IMG = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
 
