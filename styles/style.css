@@ -7,14 +7,12 @@
     font-family: 'Denk One', sans-serif;
 }
 
-body{
-    
+body {
     background-color: #85bad6;
-
 }
 
-section{
-    width: 85%;
+section {
+    max-width: 85%;
     height: 75vh;
     margin-top: 12%;
     margin-left: 8%;
@@ -28,14 +26,15 @@ section{
 }
 
 .container{
+    max-width: 90%;
     width: 90%;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 3%;
 }
 
 .container h1 {
-    width: 13.5%;
-    height: 7.5%;
     position: absolute;
     text-align: center;
     align-self: start;
@@ -108,7 +107,7 @@ section .container input {
     text-shadow: 0px 10px 5px #000;
 }
 
-.container img{
+.container img {
     display: flex;
     max-width: 140px;
     height: 140px;
@@ -143,6 +142,7 @@ section .container input {
     display:flex;
     margin: 90px 300px;
     padding: 20px;
+    position: relative;
 }
 
 .pokemonWindowBody h1{
@@ -174,19 +174,14 @@ section .container input {
     margin: 80px 200px 0px 20px;
 }
 
-.cancelMobileButton {
-    display:none;
-    height:40px;
-    text-align:center;
-    line-height: 40px;
-    margin-bottom:30px;
-}
-
 .icon i{
     height: 30px;
     font-size: 30px;
-    margin: 1px -30px;
-    position: fixed;
+    top: 10px;
+    right: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+    border-radius: 50%;
+    position: absolute;
     cursor: pointer;
     color: rgb(255, 62, 63);
 }
@@ -415,5 +410,92 @@ section .container input {
         position: relative;
         top: 110px;
         left: 50px;
+    }
+}
+
+/* ========================================================= */
+
+@media (max-width: 450px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section {
+        width: 90%;
+        height: 95vh;
+        margin-top: 5%;
+        margin-left: 1%;
+    }
+
+    section .container {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .container h1 {
+        font-size: 30px;
+        margin: -130px 70px;
+    }
+
+    section .container input {
+        width: 50%;
+        top: 120px;
+        left: 80px;
+        font-size: 11px;
+        padding: 10px;
+    }
+
+    .fa-search {
+        top: 120px;
+        left: 75%;
+        font-size: 33px;
+    }
+
+    .container .models {
+        width: 100%;
+        margin-top: 10%;
+        margin-bottom: 10px;
+    }
+
+    .pokemon-img {
+        width: 0px;
+        height: 0px;
+        margin-left: 190px;
+    }
+
+    img {
+        width: 80px;
+    }
+
+    .nameModels {
+        font-size: 20px;
+    }
+
+    .number, .type, .abilities {
+        font-size: 15px;
+    }
+    
+    .pokemonWindowBody {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pokemonBig img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody .infoPokemon .name {
+        font-size: 50px;
+    }
+
+    .infoPokemon {
+        width: 100%;
+        margin: auto;
     }
 }
