@@ -5,7 +5,7 @@ function getPokemon() {
         const pokemonItem = document.querySelector(' .container .models ').cloneNode(true);
         const URL_IMG = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${i}.svg`;
 
-        pokemonItem.querySelector(' .pokemon-img img ').src = URL_IMG;
+        pokemonItem.querySelector('.models .pokemon-img img').src = URL_IMG;
 
         axios.get(API_URL(i))
             .catch(err => {
@@ -66,7 +66,7 @@ function modalName() {
     const IMG = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${input}.svg`;
     const imgPokemon = document.querySelector(' .pokemonWindowBody ');
 
-    imgPokemon.querySelector(' .pokemonBig img ').src = IMG;
+    imgPokemon.querySelector('.pokemonBig img').src = IMG;
 
     axios.get(API_URL(input))
         .catch(err => {
@@ -87,7 +87,6 @@ function modalName() {
 
 function modalNumber() {
     let input = document.querySelector(' input ').value.trim();
-    const imgPokemon = document.querySelector(' .pokemonWindowBody ');
 
     axios.get(API_URL(input).toLocaleLowerCase())
         .catch(err => {
