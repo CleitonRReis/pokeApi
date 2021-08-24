@@ -427,6 +427,7 @@ section .container input {
         height: 95vh;
         margin-top: 5%;
         margin-left: 1%;
+        border-radius: 20px;
     }
 
     section .container {
@@ -442,10 +443,10 @@ section .container input {
     }
 
     section .container input {
-        width: 50%;
+        width: 60%;
         top: 120px;
-        left: 80px;
-        font-size: 11px;
+        left: 50px;
+        font-size: 13px;
         padding: 10px;
     }
 
@@ -459,6 +460,7 @@ section .container input {
         width: 100%;
         margin-top: 10%;
         margin-bottom: 10px;
+        border-radius: 20px;
     }
 
     .pokemon-img {
@@ -497,5 +499,45 @@ section .container input {
     .infoPokemon {
         width: 100%;
         margin: auto;
+    }
+}
+
+@media (max-width: 414px)  and (max-height: 746px) {
+    section {
+        border-radius: 20px;
+    }
+
+    section .container h1 {
+        margin-left: 85px;
+        margin-top: -100px;
+    }
+
+    .container .models {
+        margin-top: 8%;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 375px)  and (max-height: 667px) {
+    section {
+        border-radius: 20px;
+    }
+
+    section .container h1 {
+        margin-left: 70px;
+        margin-top: -80px;
+    }
+
+    section .container input {
+        top: 90px;
+    }
+
+    .fa-search {
+        top: 90px;
+    }
+
+    .container .models {
+        margin-top: 8%;
+        border-radius: 20px;
     }
 }
