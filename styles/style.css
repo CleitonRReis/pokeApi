@@ -502,7 +502,7 @@ section .container input {
     }
 }
 
-@media (max-width: 414px)  and (max-height: 746px) {
+@media (max-width: 414px)  and (max-height: 736px) {
     section {
         border-radius: 20px;
     }
