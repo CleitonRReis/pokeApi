@@ -10,6 +10,9 @@
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height: 100vh;
     background-color: #85bad6;
 }
 
@@ -27,6 +30,11 @@ section {
     border-radius: 20px;
     box-shadow: -5px 5px 10px #2f6f94,
                 5px -5px 10px #47a9e0;
+
+    transition: all .5s;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: has-show 700ms ease-in-out 300ms forwards;
 }
 
 .container {
@@ -42,8 +50,13 @@ section {
     text-transform: uppercase;
     color: rgb(255, 206, 0);
     font-size: 3rem;
-    text-shadow: 0px 10px 10px black;
+    text-shadow: 0px 10px 10px rgb(56, 54, 54);
     letter-spacing: 1.5px;
+    
+    transition: all .5s;
+    transform: translateY(-10px);
+    opacity: 0;
+    animation: has-show 700ms ease-in-out 700ms forwards;
 }
 
 .container .inputBox {
@@ -66,28 +79,48 @@ section {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgb(50, 88, 166);
     letter-spacing: 1.5px;
+
+    transition: all .5s;
+    transform: translateX(-20px);
+    opacity: 0;
+    animation: has-show 700ms ease-in-out 800ms forwards;
 }
 
 ::placeholder {
-    color: rgb(50, 88, 166);   
+    color: rgb(50, 88, 166);
 }
 
 .container .inputBox .fas {
     color: rgb(255, 62, 63);
     font-size: 3rem;
     cursor: pointer;
+
+    transition: all .5s;
+    transform: translateX(20px);
+    opacity: 0;
+    animation: has-show 700ms ease-in-out 800ms forwards;
+}
+
+.container .inputBox .nav-social {
+    display: none;
 }
 
 .container .models .pokemon-img img {
     width: 100px;
     height: 100px;
+
+    transition: all .5s;
+    transform: translateX(100px);
+    opacity: 0;
+    animation: has-show 800ms ease-in-out 1500ms forwards;
 }
 
 
 .container .models {
     width: 95%;
+    max-width: 525px;
     height: 160px;
     display: flex;
     align-items: center;
@@ -96,6 +129,11 @@ section {
                 inset -5px -5px 10px #3fa0c8;
     border-radius: 20px;
     padding: 10px;
+
+    transition: all .5s;
+    transform: translateX(-200px);
+    opacity: 0;
+    animation: has-show 800ms ease-in-out 1000ms forwards;
 }
 
 .container .models .infos {
@@ -132,6 +170,7 @@ section {
 
 .pokemonWindowArea .pokemonWindowBody {
     width: 90%;
+    max-width: 650px;
     height: auto;
     background: linear-gradient(145deg, #85bad6, #032e47);
     display: flex;
@@ -165,7 +204,263 @@ section {
     top: 1rem;
     right: 1rem;
     font-size: 3rem;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, .3);
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, .3);
     border-radius: 50%;
     cursor: pointer;
+}
+
+.infoPokemon {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@keyframes has-show {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (min-width: 960px) {
+    section {
+        width: 95vw;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+    }
+
+    section .container h1 {
+        transition: all .5s;
+        opacity: 0;
+        transform: translateX(-100px);
+        animation: has-show 700ms ease-in-out 800ms forwards;
+    }
+
+    .container {
+        max-width: 900px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0px 10px;
+    }
+
+    .inputBox {
+        max-width: 55%;
+        margin-right: 100px;
+    }
+
+    .container .inputBox input {
+        font-size: 1.5rem;
+
+        opacity: 0;
+        transform: translateY(-100px);
+        animation: has-show 700ms ease-in-out 500ms forwards;
+    }
+
+    .container .inputBox .fas {
+        transition: all .5s;
+        opacity: 0;
+        transform: translateY(-100px);
+        animation: has-show 700ms ease-in-out 500ms forwards;
+    }
+
+    .container .inputBox .nav-social {
+        width: 200px;
+        max-width: 200px;
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 3rem;
+    }
+    
+    .nav-social a {
+        color: rgb(255, 206, 0);
+    }
+    
+    .fa-github, .fa-linkedin, .fa-instagram-square {
+        padding: 8px;
+        border-radius: 50px;
+        width: 45px;
+        height: 45px;
+        text-align: center;
+        cursor: pointer;
+        transition: .7s ease-in-out;
+
+        opacity: 0;
+        transform: translateX(100px);
+        animation: has-show 700ms ease-in-out 800ms forwards;
+    }
+    
+    .fa-github:hover {
+        color: rgb(235, 215, 137);
+        transform: translate3d(0, -3px, 0);
+    }
+    
+    .fa-linkedin:hover {
+        color: rgb(235, 215, 137);
+        transform: translate3d(0, -3px, 0);
+    }
+    
+    .fa-instagram-square:hover {
+        color: rgb(235, 215, 137);
+        transform: translate3d(0, -3px, 0);
+    }
+
+    .container .models {
+        width: 270px;
+        position: relative;
+        margin-bottom: -50px;
+
+        opacity: 0;
+        transform: translateY(100px);
+        animation: has-show 700ms ease-in-out 700ms forwards;
+    }
+
+    .models img {
+        max-width: 100px;
+        top: -80px;
+        right: 0;
+        position: absolute;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody {
+        width: 800px;
+        max-width: 900px;
+        flex-direction: row;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody .infoPokemon {
+        font-size: 1rem;
+        line-height: 40px;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody .infoPokemon .nameWindow {
+        font-size: 5rem;
+        margin-bottom: 30px;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody .pokemonBig img {
+        width: 300px;
+    }
+}
+
+@media (min-width: 1200px) {
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1000px;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    section .container .models {
+        max-width: 400px;
+        transition: all .2s ease-in-out;
+    }
+
+    .models:hover {
+        transform: translateY(-20px);
+        box-shadow:  5px 5px 5px #3fa0c8;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody {
+        width: 900px;
+        max-width: 900px;
+        flex-direction: row;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody .infoPokemon {
+        font-size: 1rem;
+        line-height: 40px;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody .infoPokemon .nameWindow {
+        font-size: 7rem;
+        margin-bottom: 30px;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody .pokemonBig img {
+        width: 350px;
+    }
+}
+
+@media (min-width: 1440px) {
+    section {
+        max-width: 1200px;
+        height: 80vh;
+    }
+
+    section .container {
+        max-width: 100%;
+    }
+
+    section .container h1 {
+        margin-left: 150px;
+    }
+
+    section .container .inputBox {
+        margin-left: -250px;
+    }
+
+    .container .inputBox input {
+        font-size: 2rem;
+    }
+
+    section .container .models {
+        width: 340px;
+        max-width: 500px;
+        height: 220px;
+        transition: all .2s ease-in-out;
+    }
+
+    section .container .models img {
+        position: absolute;
+        min-height: 150px;
+        min-width: 150px;
+        top: -120px;
+    }
+
+    section .container .models .infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 2rem;
+    }
+    
+    section .container .models .infos .nameModels {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 4rem;
+    }
+
+    .models:hover {
+        transform: translateY(-20px);
+        box-shadow:  5px 5px 5px #3fa0c8;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody {
+        width: 900px;
+        max-width: 900px;
+        flex-direction: row;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody .infoPokemon {
+        font-size: 1rem;
+        line-height: 40px;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody .infoPokemon .nameWindow {
+        font-size: 7rem;
+        margin-bottom: 30px;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody .pokemonBig img {
+        width: 350px;
+    }
 }

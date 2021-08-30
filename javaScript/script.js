@@ -87,6 +87,11 @@ function modalName() {
 
 function modalNumber() {
     let input = document.querySelector(' input ').value.trim();
+    
+    const IMG = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${input}.svg`;
+    const imgPokemon = document.querySelector(' .pokemonWindowBody ');
+
+    imgPokemon.querySelector('.pokemonBig img').src = IMG;
 
     axios.get(API_URL(input).toLocaleLowerCase())
         .catch(err => {
