@@ -223,6 +223,28 @@ section {
     }
 }
 
+@media (max-width: 450px) {
+    section .container h1{
+        font-size: 2rem;
+    }
+
+    section .container .inputBox {
+        width: 95%;
+        margin-left: 20px;
+    }
+
+    section .container .inputBox .fas {
+        font-size: 2.5rem;
+    }
+
+    section .container .models .pokemon-img img {
+        width: 80px;
+        position: absolute;
+        right: 40px;
+        margin-top: -90px;
+    }
+}
+
 @media (min-width: 960px) {
     section {
         width: 95vw;
