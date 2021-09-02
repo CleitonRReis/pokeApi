@@ -245,9 +245,32 @@ section {
     }
 }
 
-@media (min-width: 568px) and (max-width: 736px) {
+
+
+@media (max-height: 568px) {
+    section {
+        width: 900px;
+        height: 370px;
+    }
+    
     .container {
-        flex-flow: row;
+        flex-wrap: wrap;
+        flex-flow: wrap;
+    }
+
+    section .container .models {
+        width: 220px;
+    }
+
+    section .container .models img {
+        max-width: 80px;
+        position: absolute;
+        margin-top: -140px;
+        margin-left: -50px;
+    }
+
+    section .container .models .infos .nameModels {
+        font-size: 2rem;
     }
 }
 
