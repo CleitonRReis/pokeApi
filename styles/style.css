@@ -250,7 +250,6 @@ section {
 @media (max-height: 568px) {
     section {
         width: 900px;
-        height: 370px;
     }
     
     .container {
