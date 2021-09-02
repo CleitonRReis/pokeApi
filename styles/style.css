@@ -224,7 +224,7 @@ section {
 }
 
 @media (max-width: 450px) {
-    section .container h1{
+    section .container h1 {
         font-size: 2rem;
     }
 
@@ -240,7 +240,7 @@ section {
     section .container .models .pokemon-img img {
         width: 80px;
         position: absolute;
-        right: 30px;
+        right: 10px;
         margin-top: -90px;
     }
 }
