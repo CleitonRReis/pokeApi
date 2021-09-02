@@ -268,10 +268,6 @@ section {
         right: 0px;
         margin-top: -90px;
     }
-
-    .pokemonWindowArea .pokemonWindowBody .pokemonBig img {
-        width: 200px;
-    }
 }
 
 @media (max-height: 414px) {
@@ -297,6 +293,10 @@ section {
 
     section .container .models .infos .nameModels {
         font-size: 2rem;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody .pokemonBig img {
+        max-width: 120px;
     }
 }
 
