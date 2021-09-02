@@ -245,8 +245,6 @@ section {
     }
 }
 
-
-
 @media (max-height: 414px) {
     section {
         width: 900px;
@@ -264,8 +262,8 @@ section {
     section .container .models img {
         max-width: 80px;
         position: absolute;
-        margin-top: -140px;
-        margin-left: -50px;
+        margin-top: -145px;
+        margin-left: -70px;
     }
 
     section .container .models .infos .nameModels {
