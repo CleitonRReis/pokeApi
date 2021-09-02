@@ -223,6 +223,31 @@ section {
     }
 }
 
+@media (max-width: 320px) {
+    section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    section .container .models {
+        height: 130px;
+        margin: 5px;
+    }
+
+    section .container .models .pokemon-img img {
+        max-width: 70px;
+    }
+
+    section .container .models .infos {
+        font-size: 1.5rem;
+        height: 130px;
+    }
+
+    section .container .models .infos .nameModels {
+        font-size: 2rem;
+    }
+}
+
 @media (max-width: 450px) {
     section .container h1 {
         font-size: 2rem
@@ -242,6 +267,10 @@ section {
         position: absolute;
         right: 0px;
         margin-top: -90px;
+    }
+
+    .pokemonWindowArea .pokemonWindowBody .pokemonBig img {
+        width: 200px;
     }
 }
 
