@@ -225,7 +225,7 @@ section {
 
 @media (max-width: 450px) {
     section .container h1 {
-        font-size: 2rem;
+        font-size: 2rem
     }
 
     section .container .inputBox {
