@@ -399,12 +399,12 @@ section {
     }
     
     section .container .inputBox .nav-social a {
-        transition: all .5s ease-in-out;
+        transition: all .3s ease-in-out;
     }
 
     section .container .inputBox .nav-social a:hover  {
         color: rgb(235, 215, 137);
-        transform: translateY(-3px);
+        transform: translate3d(0, -3px, 0);
     }
 
     .container .models {
@@ -459,12 +459,7 @@ section {
 
     section .container .models {
         max-width: 400px;
-        transition: all .2s ease-in-out;
-    }
-
-    .models:hover {
-        transform: translateY(-20px);
-        box-shadow:  5px 5px 5px #3fa0c8;
+        transition: all .5s ease-in-out;
     }
 
     .pokemonWindowArea .pokemonWindowBody {
@@ -539,7 +534,6 @@ section {
     }
 
     .models:hover {
-        transform: translateY(-20px);
         box-shadow:  5px 5px 5px #3fa0c8;
     }
 
