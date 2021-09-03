@@ -257,7 +257,6 @@ section {
     }
 
     section .container h1 {
-        /* background-color: brown; */
         font-size: 2.5rem;
     }
 
@@ -360,7 +359,6 @@ section {
 
     .container .inputBox input {
         font-size: 1.5rem;
-
         opacity: 0;
         transform: translateY(-100px);
         animation: has-show 700ms ease-in-out 500ms forwards;
@@ -400,19 +398,13 @@ section {
         animation: has-show 700ms ease-in-out 800ms forwards;
     }
     
-    .fa-github:hover {
-        color: rgb(235, 215, 137);
-        transform: translate3d(0, -3px, 0);
+    section .container .inputBox .nav-social a {
+        transition: all .5s ease-in-out;
     }
-    
-    .fa-linkedin:hover {
+
+    section .container .inputBox .nav-social a:hover  {
         color: rgb(235, 215, 137);
-        transform: translate3d(0, -3px, 0);
-    }
-    
-    .fa-instagram-square:hover {
-        color: rgb(235, 215, 137);
-        transform: translate3d(0, -3px, 0);
+        transform: translateY(-3px);
     }
 
     .container .models {
